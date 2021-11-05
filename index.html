@@ -174,8 +174,8 @@
    .line-nav>span:hover::before{left:0}
    .main-div-intro{padding: 5em 1em ;
    background: linear-gradient(rgba(9,15,20,0.92),rgba(9,15,20,0.92)),url("white-unsplash-9d0375d2.jpg");background-size:cover;}
-   .intro-div>h5{font-family: samsung-bold;text-transform:capitalize;font-weight:600;}	
-   .intro-div>h2{font-family: samsung-bold;text-transform:capitalize;
+   .intro-div>div>h5{font-family: samsung-bold;text-transform:capitalize;font-weight:600;}	
+   .intro-div>div>h2{font-family: samsung-bold;text-transform:capitalize;
    color:var(--green-col)}
    .intro-div>p{font-size: 14px;font-weight:300;padding:1em 0;line-height:1.9}
    .intro-div>button{padding: 0.45em 1.3em;border:1px solid var(--green-col);background: transparent;color:var(--gray-col);
@@ -498,8 +498,7 @@
        <div class="flex cursor-div main-div-intro align-items-center">
       
          <div class="col-md-6 intro-div">
-           <h5>I am jerry azubuike</h5>
-            <h2>i am a web developer</h2>
+           <div></div>
              <p>
              Programming delight the user and make it work . web and user interface
              design-development. Interactive design like animation
@@ -769,9 +768,31 @@
   </body>
   </html>
   
-  
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
   <script type="text/javascript">
+      //typing js effect code
+  var app = document.querySelector(".intro-div>div");
+  
+  var typewriter = new Typewriter(app, {
+  loop: true,
+  delay:40,
+  });
+  
+  typewriter
+  .pauseFor(2500)
+  .typeString('<h5 style="font-family: samsung-bold;text-transform:capitalize">I am jerry azubuike </></h5>')
+  .pauseFor(500)
+  .typeString('<h2 style="font-family: samsung-bold;text-transform:capitalize;color:var(--green-col)">i am a web developer</h2>')
+  .pauseFor(1000)
+  .deleteChars(20)
+  .typeString('<h2 style="font-family: samsung-bold;text-transform:capitalize;color:var(--green-col)">ui/ux designer</h2>')
+  .pauseFor(1000)
+  .deleteChars(14)
+  .typeString('<h2 style="font-family: samsung-bold;text-transform:capitalize;color:var(--green-col)">back-end expert</h2>')
+  .pauseFor(1000)
+  .start();
+  
   
   document.querySelector(".explore").onclick=function(){
       $("html").animate({scrollTop:document.querySelector(".explore-div").getBoundingClientRect().top-100+"px"},1500)
