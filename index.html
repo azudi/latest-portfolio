@@ -498,7 +498,10 @@
        <div class="flex cursor-div main-div-intro align-items-center">
       
          <div class="col-md-6 intro-div">
-           <div></div>
+           <div>
+           <h5>i am jerry azubuike</h5>
+                <h2>i am a <span></span></h2>
+           </div>
              <p>
              Programming delight the user and make it work . web and user interface
              design-development. Interactive design like animation
@@ -772,24 +775,21 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
   <script type="text/javascript">
       //typing js effect code
-  var app = document.querySelector(".intro-div>div");
-  
+  var app = document.querySelector(".intro-div>div>h2>span");
   var typewriter = new Typewriter(app, {
-  loop:false,
-  delay:40,
+  loop: true,
+  delay:30,
   });
   
   typewriter
   .pauseFor(2500)
-  .typeString('<h5 style="font-family: samsung-bold;text-transform:capitalize">I am jerry azubuike </></h5>')
-  .pauseFor(500)
-  .typeString('<h2 style="font-family: samsung-bold;text-transform:capitalize;color:var(--green-col)">i am a web developer</h2>')
+  .typeString('web developer')
   .pauseFor(1000)
   .deleteChars(20)
-  .typeString('<h2 style="font-family: samsung-bold;text-transform:capitalize;color:var(--green-col)">ui/ux designer</h2>')
+  .typeString('ui/ux designer')
   .pauseFor(1000)
   .deleteChars(14)
-  .typeString('<h2 style="font-family: samsung-bold;text-transform:capitalize;color:var(--green-col)">full-stack developer</h2>')
+  .typeString('back-end expert')
   .pauseFor(1000)
   .start();
   
